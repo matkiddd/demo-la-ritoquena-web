@@ -2,21 +2,22 @@
 <html lang="es-CL">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>La Ritoqueña · Hotel de playa en Ritoque, Quintero | Desayuno incluido</title>
-<meta name="description" content="Hotel de playa frente al mar de Ritoque, Quintero. 6 habitaciones con baño privado y vista al mar, desayuno incluido, a 2 horas de Santiago. Reserve directo, desde $72.000 la noche.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>La Ritoqueña · Hotel de playa en Ritoque, Quintero</title>
+<meta name="description" content="Hotel de playa en Ritoque, Quintero: seis habitaciones de madera entre dunas, bosque y mar, con desayuno incluido. Reserva directa en línea.">
 <!-- Demo: no indexar hasta publicar en laritoquena.com -->
 <meta name="robots" content="noindex, nofollow">
 <link rel="canonical" href="https://laritoquena.com/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_CL">
 <meta property="og:title" content="La Ritoqueña · Hotel de playa en Ritoque">
-<meta property="og:description" content="Despierte frente al mar. 6 habitaciones con vista al mar y desayuno incluido, a 2 horas de Santiago.">
-<meta property="og:image" content="img/compartir.jpg">
-<meta name="theme-color" content="#23617E">
+<meta property="og:description" content="Seis habitaciones de madera entre dunas, bosque y mar. Desayuno incluido, a unas 2 horas de Santiago.">
+<!-- Al publicar en laritoquena.com, cambiar por https://laritoquena.com/img/compartir.jpg -->
+<meta property="og:image" content="https://matkiddd.github.io/demo-la-ritoquena-web/img/compartir.jpg">
+<meta name="theme-color" content="#252725">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="img/playa-ritoque-720.webp" imagesrcset="img/playa-ritoque-720.webp 720w, img/playa-ritoque-1400.webp 1400w" imagesizes="100vw">
 <link rel="stylesheet" href="estilos.css">
 <script type="application/ld+json">
@@ -26,10 +27,9 @@
   "name": "La Ritoqueña Hotel de Playa",
   "url": "https://laritoquena.com/",
   "image": "https://laritoquena.com/img/compartir.jpg",
-  "description": "Hotel de playa frente al mar de Ritoque con 6 habitaciones, baño privado, vista al mar y desayuno incluido.",
+  "description": "Hotel de playa en Ritoque, Quintero, con 6 habitaciones y desayuno incluido.",
   "telephone": "+56961212436",
   "email": "laritoquena@gmail.com",
-  "priceRange": "Desde $72.000 CLP por noche",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Ritoque, sitio 70",
@@ -37,14 +37,11 @@
     "addressRegion": "Valparaíso",
     "addressCountry": "CL"
   },
+  "geo": {"@type": "GeoCoordinates", "latitude": -32.827948, "longitude": -71.5294259},
   "numberOfRooms": 6,
-  "checkinTime": "14:30",
-  "checkoutTime": "12:00",
   "amenityFeature": [
     {"@type": "LocationFeatureSpecification", "name": "Desayuno incluido", "value": true},
-    {"@type": "LocationFeatureSpecification", "name": "Wifi", "value": true},
-    {"@type": "LocationFeatureSpecification", "name": "Estacionamiento gratuito", "value": true},
-    {"@type": "LocationFeatureSpecification", "name": "Acceso a la playa", "value": true}
+    {"@type": "LocationFeatureSpecification", "name": "Wifi", "value": true}
   ],
   "sameAs": ["https://www.instagram.com/laritoquena/", "https://www.facebook.com/laritoquena"]
 }
@@ -55,202 +52,276 @@
 
 <div class="aviso-demo" role="note">Demo preparada por Ascensus para La Ritoqueña · no es la web oficial</div>
 
-<header class="cabecera" id="cabecera">
-  <a href="#inicio" class="marca" aria-label="La Ritoqueña, ir al inicio">
-    <img src="img/logo-blanco.png" alt="La Ritoqueña Hotel de Playa" width="300" height="113" class="logo-claro">
-    <img src="img/logo-oscuro.png" alt="" width="300" height="113" class="logo-oscuro" aria-hidden="true">
+<header class="cab" id="cab">
+  <div class="cab-izq">
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu"><span class="ico" aria-hidden="true"></span><span class="menu-txt">Menú</span></button>
+    <nav class="nav-linea" aria-label="Secciones">
+      <a href="#hotel">El hotel</a>
+      <a href="#como-llegar">Cómo llegar</a>
+      <a href="#habitaciones">Habitaciones</a>
+    </nav>
+  </div>
+  <a href="#inicio" class="cab-marca" aria-label="La Ritoqueña, ir al inicio">
+    <img src="img/logo-blanco.png" alt="" width="600" height="227" class="logo-claro">
+    <img src="img/logo-oscuro.png" alt="" width="600" height="227" class="logo-oscuro">
   </a>
-  <button class="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú"><span></span></button>
-  <nav id="menu" class="menu" aria-label="Principal">
-    <a href="#habitaciones">Habitaciones</a>
-    <a href="#experiencias">Experiencias</a>
-    <a href="#opiniones">Opiniones</a>
-    <a href="#llegar">Cómo llegar</a>
-    <a href="#preguntas">Preguntas</a>
-    <a href="#reservar" class="btn btn-ambar">Reservar</a>
-  </nav>
+  <a href="#reservar" class="cab-reservar">Reservar</a>
 </header>
+
+<div class="panel-menu" id="menu" role="dialog" aria-modal="true" aria-label="Menú" hidden>
+  <div class="panel-sup">
+    <button class="menu-cerrar" type="button">Cerrar</button>
+  </div>
+  <nav aria-label="Principal">
+    <a href="#hotel">El hotel</a>
+    <a href="#como-llegar">Cómo llegar</a>
+    <a href="#habitaciones">Habitaciones</a>
+    <a href="#estadia">Estadía y entorno</a>
+    <a href="#preguntas">Preguntas y contacto</a>
+    <a href="#reservar">Reservar</a>
+  </nav>
+  <p class="panel-pie">Ritoque, sitio 70, Quintero · <a href="https://wa.me/56961212436" target="_blank" rel="noopener">WhatsApp</a> · <a href="https://www.instagram.com/laritoquena/" target="_blank" rel="noopener">Instagram</a></p>
+</div>
 
 <main id="contenido">
 <section class="portada" id="inicio">
   <img class="portada-foto" src="img/playa-ritoque-720.webp" srcset="img/playa-ritoque-720.webp 720w, img/playa-ritoque-1400.webp 1400w" sizes="100vw" alt="Playa de Ritoque con olas y cerros al fondo" width="1400" height="792" fetchpriority="high">
   <div class="portada-txt">
-    <p class="antetitulo">Hotel de playa · Ritoque, Quintero</p>
-    <h1>Despierte frente al mar de Ritoque</h1>
-    <p class="bajada">Seis habitaciones con vista al mar, entre dunas, bosque y 17 km de playa. A 2 horas de Santiago.</p>
-  </div>
-
-  <form class="reserva" id="reservar" aria-labelledby="reserva-titulo">
-    <h2 id="reserva-titulo">Reserve directo</h2>
-    <p class="precio"><b>Desde $72.000</b> la noche, con desayuno</p>
-    <div class="fechas">
-      <label>Llegada<input type="date" name="checkin" id="checkin" required></label>
-      <label>Salida<input type="date" name="checkout" id="checkout" required></label>
+    <img class="portada-logo" src="img/logo-blanco.png" alt="La Ritoqueña Hotel de Playa" width="600" height="227">
+    <p class="portada-lugar">Hotel de playa · Ritoque, Quintero</p>
+    <h1>Donde el mar marca el ritmo.</h1>
+    <div class="portada-acciones">
+      <a class="btn btn-claro" href="#reservar">Ver disponibilidad</a>
+      <a class="enlace-flecha claro" href="#hotel">Explorar el hotel</a>
     </div>
-    <label>Huéspedes
-      <select name="adults" id="adults">
-        <option value="1">1 adulto</option>
-        <option value="2" selected>2 adultos</option>
-        <option value="3">3 adultos</option>
-        <option value="4">4 adultos</option>
-      </select>
-    </label>
-    <p class="error" id="error-fechas" role="alert" hidden></p>
-    <button type="submit" class="btn btn-ambar btn-grande">Ver disponibilidad y precio</button>
-    <p class="nota">Abre nuestro sistema de reservas con sus fechas. Pago seguro, sin comisiones de intermediarios.</p>
-  </form>
-</section>
-
-<section class="confianza" aria-label="Lo que nos distingue">
-  <div><b>9,4<small>/10</small></b><span>calificación de huéspedes en plataformas de viaje</span></div>
-  <div><b>20 m</b><span>de la arena, con acceso directo a la playa</span></div>
-  <div><b>35 mil</b><span>personas nos siguen en Instagram</span></div>
-  <div><b>Desayuno</b><span>casero incluido en todas las tarifas</span></div>
-</section>
-
-<section class="seccion" id="habitaciones">
-  <div class="encabezado">
-    <h2>Habitaciones</h2>
-    <p>Madera, ventanales y el ruido del mar. Todas con baño privado y desayuno incluido.</p>
   </div>
-  <div class="habs">
+</section>
+
+<section class="reserva" id="reservar" aria-labelledby="reserva-titulo">
+  <div class="contenedor reserva-fila">
+    <div class="reserva-txt">
+      <h2 id="reserva-titulo">Reserva directa</h2>
+      <p>Consulta disponibilidad y precios en Cloudbeds.</p>
+      <a class="btn-llamar" href="tel:+56961212436">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.4" d="M5 3.5h3.5l1.8 4.6-2.3 1.4a11 11 0 0 0 6.5 6.5l1.4-2.3 4.6 1.8V19a1.5 1.5 0 0 1-1.6 1.5A16.5 16.5 0 0 1 3.5 5.1 1.5 1.5 0 0 1 5 3.5z"/></svg>
+        <span>¿Prefieres llamar? <strong>+56 9 6121 2436</strong></span>
+      </a>
+    </div>
+    <div>
+      <form class="form-reserva" id="form-reserva" novalidate>
+        <label class="f-llegada">Llegada<input type="date" name="checkin" id="checkin" required></label>
+        <label class="f-salida">Salida<input type="date" name="checkout" id="checkout" required></label>
+        <label class="f-huespedes">Huéspedes
+          <select name="adults" id="adults">
+            <option value="1">1 persona</option>
+            <option value="2" selected>2 personas</option>
+            <option value="3">3 personas</option>
+            <option value="4">4 personas</option>
+          </select>
+        </label>
+        <button type="submit" class="btn btn-claro">Ver disponibilidad</button>
+      </form>
+      <p class="error" id="error-fechas" role="alert" hidden></p>
+      <p class="reserva-nota">Se abre en una pestaña nueva, en español. Ahí eliges la habitación y ves el precio final.</p>
+    </div>
+  </div>
+</section>
+
+<section class="hotel" id="hotel">
+  <div class="contenedor fila-intro">
+    <div class="intro-txt">
+      <p class="antetitulo">El hotel</p>
+      <h2>Madera, calma y océano.</h2>
+      <p>A unas dos horas de Santiago, casi escondido entre dunas, bosque y mar, hay un pequeño hotel de madera con seis habitaciones. Aquí el día lo ordenan la luz y las olas.</p>
+      <p class="dato"><a href="https://www.google.com/maps/search/?api=1&query=La+Ritoque%C3%B1a+Hotel+de+Playa+Ritoque" target="_blank" rel="noopener">4,6 de 5 en Google Maps</a>, con 178 reseñas (noviembre de 2026).</p>
+    </div>
+    <figure class="intro-foto">
+      <img src="img/hotel-fachada-720.webp" srcset="img/hotel-fachada-720.webp 720w, img/hotel-fachada-1400.webp 1400w" sizes="(min-width: 900px) 58vw, 100vw" alt="Los módulos de madera del hotel, con balcones, entre jardín y bosque" width="1400" height="769" loading="lazy">
+    </figure>
+  </div>
+</section>
+
+<section class="llegar" id="como-llegar" aria-labelledby="llegar-titulo">
+  <div class="contenedor llegar-fila">
+    <div class="llegar-txt">
+      <p class="antetitulo">Ubicación</p>
+      <h2 id="llegar-titulo">Cómo llegar</h2>
+      <address class="dir">Ritoque, sitio 70<br>Quintero, Región de Valparaíso</address>
+      <p>Te recomendamos abrir la ruta en tu celular antes de salir.</p>
+      <div class="llegar-botones">
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&query=La+Ritoque%C3%B1a+Hotel+de+Playa+Ritoque" target="_blank" rel="noopener">Abrir en Google Maps</a>
+        <a class="btn btn-linea" href="https://waze.com/ul?ll=-32.827948%2C-71.5294259&navigate=yes" target="_blank" rel="noopener">Abrir en Waze</a>
+      </div>
+    </div>
+    <div class="mapa">
+      <iframe title="Mapa con la ubicación de La Ritoqueña en Ritoque, Quintero" src="https://maps.google.com/maps?q=-32.827948,-71.5294259&z=13&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="habs" id="habitaciones">
+  <div class="contenedor">
+    <header class="encabezado">
+      <p class="antetitulo">Habitaciones</p>
+      <h2>Dos formas de quedarse</h2>
+      <p>Cuatro habitaciones matrimoniales con balcón y un módulo familiar. Desayuno incluido en todas las tarifas.</p>
+    </header>
+
     <article class="hab">
-      <div class="galeria" data-galeria>
-        <img src="img/habitacion-balcon-mar-720.webp" alt="Habitación matrimonial con ventanal y balcón frente al mar" width="720" height="960" loading="lazy">
-        <img src="img/habitacion-vista-mar-720.webp" alt="Cama matrimonial con vista al mar por el ventanal" width="720" height="960" loading="lazy">
-        <img src="img/hamaca-balcon-720.webp" alt="Balcón con hamaca y vista a la bahía" width="720" height="511" loading="lazy">
-        <img src="img/bano-ducha-720.webp" alt="Baño privado con ducha" width="720" height="960" loading="lazy">
+      <div class="galeria" data-galeria role="group" aria-roledescription="carrusel" aria-label="Fotos de la habitación matrimonial">
+        <div class="gal-marco vertical">
+          <img src="img/habitacion-balcon-mar-720.webp" srcset="img/habitacion-balcon-mar-720.webp 720w, img/habitacion-balcon-mar-1400.webp 1050w" sizes="(min-width: 900px) 40vw, 100vw" alt="Habitación matrimonial con ventanal y balcón frente al mar" width="1050" height="1400" loading="lazy">
+          <img src="img/habitacion-vista-mar-720.webp" srcset="img/habitacion-vista-mar-720.webp 720w, img/habitacion-vista-mar-1400.webp 1050w" sizes="(min-width: 900px) 40vw, 100vw" alt="Cama matrimonial con vista al mar por el ventanal" width="1050" height="1400" loading="lazy" hidden>
+          <img src="img/balcon-terraza-720.webp" srcset="img/balcon-terraza-720.webp 720w, img/balcon-terraza-1400.webp 1050w" sizes="(min-width: 900px) 40vw, 100vw" alt="Balcón de madera con mesa y sillas junto a la habitación" width="1050" height="1400" loading="lazy" hidden>
+          <img src="img/bano-ducha-720.webp" srcset="img/bano-ducha-720.webp 720w, img/bano-ducha-1400.webp 1050w" sizes="(min-width: 900px) 40vw, 100vw" alt="Baño privado con ducha" width="1050" height="1400" loading="lazy" hidden>
+        </div>
+        <div class="gal-ctrl">
+          <button type="button" class="gal-ant" aria-label="Foto anterior">←</button>
+          <span class="gal-cont" aria-live="polite">1 / 4</span>
+          <button type="button" class="gal-sig" aria-label="Foto siguiente">→</button>
+        </div>
       </div>
       <div class="hab-info">
+        <p class="antetitulo">4 habitaciones</p>
         <h3>Matrimonial con balcón al mar</h3>
-        <p>Cuatro habitaciones en altura, con balcón propio para el café de la mañana mirando la bahía.</p>
-        <ul class="chips"><li>2 personas</li><li>Cama matrimonial</li><li>Baño privado</li><li>Balcón</li><li>Vista al mar</li></ul>
-        <div class="hab-pie"><p class="desde"><small>Desde</small> $72.000 <small>/ noche</small></p><a class="btn btn-ambar" href="#reservar" data-ir-reserva="2">Ver fechas</a></div>
+        <p>Habitaciones en altura, revestidas en madera, con un balcón propio para el café de la mañana mirando la bahía.</p>
+        <dl class="datos">
+          <div><dt>Capacidad</dt><dd>2 personas</dd></div>
+          <div><dt>Cama</dt><dd>Matrimonial</dd></div>
+          <div><dt>Baño</dt><dd>Privado, solo para esta habitación</dd></div>
+          <div><dt>Exterior</dt><dd>Balcón con vista al mar</dd></div>
+        </dl>
+        <a class="btn" href="#reservar" data-adultos="2">Consultar fechas para 2</a>
+        <p class="nota">Esto ajusta los huéspedes del formulario. La habitación la eliges después, en Cloudbeds.</p>
       </div>
     </article>
-    <article class="hab">
-      <div class="galeria" data-galeria>
-        <img src="img/habitacion-modulo-720.webp" alt="Habitación del módulo familiar con cama matrimonial" width="720" height="540" loading="lazy">
-        <img src="img/habitacion-calida-720.webp" alt="Segunda habitación del módulo con luz cálida" width="720" height="520" loading="lazy">
-        <img src="img/sala-estar-bosca-720.webp" alt="Sala de estar común con bosca y sillones" width="720" height="960" loading="lazy">
-        <img src="img/bano-privado-720.webp" alt="Baño del módulo" width="720" height="1161" loading="lazy">
+
+    <article class="hab invertida">
+      <div class="galeria" data-galeria role="group" aria-roledescription="carrusel" aria-label="Fotos del módulo familiar">
+        <div class="gal-marco horizontal">
+          <img src="img/habitacion-modulo-720.webp" srcset="img/habitacion-modulo-720.webp 720w, img/habitacion-modulo-1400.webp 1400w" sizes="(min-width: 900px) 50vw, 100vw" alt="Habitación del módulo familiar con cama matrimonial" width="1400" height="1050" loading="lazy">
+          <img src="img/habitacion-calida-720.webp" srcset="img/habitacion-calida-720.webp 720w, img/habitacion-calida-1400.webp 1400w" sizes="(min-width: 900px) 50vw, 100vw" alt="Segunda habitación del módulo, con luz cálida" width="1400" height="1011" loading="lazy" hidden>
+          <img class="entera" src="img/bano-privado-720.webp" srcset="img/bano-privado-720.webp 720w, img/bano-privado-1400.webp 868w" sizes="(min-width: 900px) 30vw, 60vw" alt="Baño del módulo, compartido por sus dos habitaciones" width="868" height="1400" loading="lazy" hidden>
+        </div>
+        <div class="gal-ctrl">
+          <button type="button" class="gal-ant" aria-label="Foto anterior">←</button>
+          <span class="gal-cont" aria-live="polite">1 / 3</span>
+          <button type="button" class="gal-sig" aria-label="Foto siguiente">→</button>
+        </div>
       </div>
       <div class="hab-info">
+        <p class="antetitulo">1 módulo</p>
         <h3>Módulo familiar</h3>
-        <p>Dos habitaciones matrimoniales y un baño, ideal para familias o dos parejas que viajan juntas.</p>
-        <ul class="chips"><li>Hasta 4 personas</li><li>2 habitaciones</li><li>1 baño</li><li>Desayuno incluido</li></ul>
-        <div class="hab-pie"><p class="desde"><small>Consulte</small> tarifa familiar</p><a class="btn btn-ambar" href="#reservar" data-ir-reserva="4">Ver fechas</a></div>
+        <p>Dos habitaciones matrimoniales que comparten un baño. Pensado para familias o dos parejas que viajan juntas.</p>
+        <dl class="datos">
+          <div><dt>Capacidad</dt><dd>Hasta 4 personas</dd></div>
+          <div><dt>Habitaciones</dt><dd>2 matrimoniales</dd></div>
+          <div><dt>Baño</dt><dd>1, compartido entre las dos habitaciones</dd></div>
+        </dl>
+        <a class="btn" href="#reservar" data-adultos="4">Consultar fechas para 4</a>
+        <p class="nota">Esto ajusta los huéspedes del formulario. La habitación la eliges después, en Cloudbeds.</p>
       </div>
     </article>
   </div>
-
-  <div class="incluye">
-    <h3>Su estadía incluye</h3>
-    <ul>
-      <li><b>Desayuno casero</b>En todas las tarifas.</li>
-      <li><b>Wifi de alta velocidad</b>Para trabajar con vista al mar.</li>
-      <li><b>Sala de estar con bosca</b>Y terraza para todo el día.</li>
-      <li><b>Estacionamiento</b>Gratuito, dentro del hotel.</li>
-      <li><b>Menú diario</b>Almuerzo o cena caseros, con costo adicional y reserva previa.</li>
-      <li><b>Horarios</b>Llegada desde las 14:30 · salida hasta las 12:00.</li>
-    </ul>
-  </div>
 </section>
 
-<section class="seccion experiencias" id="experiencias">
-  <div class="encabezado">
-    <h2>El turismo outdoor empieza en su puerta</h2>
-    <p>Ritoque es uno de los pocos rincones de la costa central que sigue casi intacto.</p>
-  </div>
-  <div class="exp-grid">
-    <figure class="exp grande"><img src="img/costa-atardecer-1400.webp" srcset="img/costa-atardecer-720.webp 720w, img/costa-atardecer-1400.webp 1400w" sizes="(min-width: 900px) 60vw, 100vw" alt="Atardecer sobre la costa rocosa cerca de Ritoque" width="1400" height="655" loading="lazy"><figcaption><b>17 km de playa</b>Caminatas largas por la arena y dunas, en cualquier época del año.</figcaption></figure>
-    <figure class="exp"><img src="img/sendero-costero-720.webp" alt="Sendero costero entre palmeras con vista al mar" width="720" height="960" loading="lazy"><figcaption><b>Senderos costeros</b>Salen desde el hotel.</figcaption></figure>
-    <figure class="exp"><img src="img/mar-roquerios-720.webp" alt="Mar calmo y roqueríos en la bahía" width="720" height="960" loading="lazy"><figcaption><b>Surf, SUP y pesca</b>Actividades de mar todo el año.</figcaption></figure>
-  </div>
-</section>
+<section class="estadia" id="estadia">
+  <div class="contenedor">
+    <header class="encabezado">
+      <p class="antetitulo">Estadía y entorno</p>
+      <h2>Días a otro ritmo</h2>
+    </header>
+    <div class="momentos">
+      <figure class="m-ancho">
+        <img src="img/hamaca-balcon-720.webp" srcset="img/hamaca-balcon-720.webp 720w, img/hamaca-balcon-1400.webp 1400w" sizes="(min-width: 900px) 60vw, 100vw" alt="Hamaca en un balcón de madera con vista a la bahía" width="1400" height="993" loading="lazy">
+        <figcaption><b>Mañanas</b>Café en el balcón, con la bahía enfrente.</figcaption>
+      </figure>
+      <figure class="m-alto">
+        <img src="img/sala-estar-bosca-720.webp" alt="Sala de estar con bosca encendida, sillones y escalera de madera" width="720" height="960" loading="lazy">
+        <figcaption><b>Tardes</b>Lectura junto a la bosca de la sala de estar.</figcaption>
+      </figure>
+      <figure class="m-pano">
+        <img src="img/costa-atardecer-720.webp" srcset="img/costa-atardecer-720.webp 720w, img/costa-atardecer-1400.webp 1400w" sizes="100vw" alt="Atardecer sobre la costa rocosa cerca de Ritoque" width="1400" height="655" loading="lazy">
+        <figcaption><b>Atardeceres</b>La costa cambia de color al caer el sol.</figcaption>
+      </figure>
+    </div>
 
-<section class="seccion opiniones" id="opiniones">
-  <div class="encabezado">
-    <h2>Lo que dicen nuestros huéspedes</h2>
-    <p>Calificación 9,4 de 10 en plataformas de viaje. Destacan la vista, la atención y el desayuno.</p>
-  </div>
-  <div class="ops">
-    <blockquote class="op ejemplo"><p class="estrellas" aria-label="5 de 5 estrellas">★★★★★</p><p>Espacio para una reseña real de Google, con nombre y fecha, elegida junto a ustedes.</p><footer>Reseña de ejemplo · demo</footer></blockquote>
-    <blockquote class="op ejemplo"><p class="estrellas" aria-label="5 de 5 estrellas">★★★★★</p><p>Aquí va otra opinión verificada sobre la vista, la atención o el desayuno.</p><footer>Reseña de ejemplo · demo</footer></blockquote>
-    <blockquote class="op ejemplo"><p class="estrellas" aria-label="5 de 5 estrellas">★★★★★</p><p>Las reseñas se toman de su perfil de Google, con permiso, nunca inventadas.</p><footer>Reseña de ejemplo · demo</footer></blockquote>
-  </div>
-</section>
+    <div class="fila-ritoque">
+      <div class="ritoque-txt">
+        <h3>17 km de playa, dunas y bosque</h3>
+        <p>Uno de los pocos rincones de la costa central que sigue casi intacto. Desde el hotel salen senderos costeros, y hay olas para surf y SUP, y pesca durante todo el año.</p>
+      </div>
+      <figure class="ritoque-a"><img src="img/sendero-costero-720.webp" alt="Sendero costero entre palmeras con vista al mar" width="720" height="960" loading="lazy"></figure>
+      <figure class="ritoque-b"><img src="img/mar-roquerios-720.webp" alt="Mar calmo y roqueríos en la bahía" width="720" height="960" loading="lazy"></figure>
+    </div>
 
-<section class="seccion llegar" id="llegar">
-  <div class="llegar-txt">
-    <h2>Cómo llegar</h2>
-    <p class="dir"><b>Ritoque, sitio 70, Quintero</b>Región de Valparaíso</p>
-    <ul class="tiempos">
-      <li><b>2 h</b> desde Santiago</li>
-      <li><b>40 min</b> desde Concón</li>
-      <li><b>10 min</b> desde Quintero</li>
-    </ul>
-    <p>Estamos casi escondidos entre las dunas: le recomendamos abrir la ruta en su celular antes de salir.</p>
-    <div class="botones">
-      <a class="btn btn-mar" href="https://www.google.com/maps/search/?api=1&query=La+Ritoque%C3%B1a+Hotel+de+Playa+Ritoque" target="_blank" rel="noopener">Abrir en Google Maps</a>
-      <a class="btn btn-borde" href="https://waze.com/ul?q=La%20Ritoque%C3%B1a%20Hotel%20de%20Playa&navigate=yes" target="_blank" rel="noopener">Abrir en Waze</a>
+    <div class="servicios">
+      <div>
+        <h3>Incluido</h3>
+        <ul>
+          <li>Desayuno casero, en todas las tarifas</li>
+          <li>Wifi de alta velocidad, también para trabajar</li>
+          <li>Sala de estar con bosca y terraza</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Con costo adicional</h3>
+        <ul>
+          <li>Menú diario casero, almuerzo o cena, con reserva previa</li>
+        </ul>
+      </div>
     </div>
   </div>
-  <div class="mapa">
-    <iframe title="Mapa de ubicación de La Ritoqueña en Ritoque" src="https://maps.google.com/maps?q=La%20Ritoque%C3%B1a%20Hotel%20de%20Playa%2C%20Ritoque%2C%20Quintero&z=13&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+
+<section class="preguntas" id="preguntas">
+  <div class="contenedor angosto">
+    <header class="encabezado">
+      <p class="antetitulo">Preguntas</p>
+      <h2>Antes de venir</h2>
+    </header>
+    <div class="faq">
+      <details><summary>¿Cómo reservo?</summary><p>Eliges tus fechas en el formulario de reserva y se abre Cloudbeds, nuestro motor de reservas, en una pestaña nueva y en español. Ahí ves la disponibilidad, eliges la habitación y pagas. Si tienes un requerimiento especial, escríbenos por WhatsApp.</p></details>
+      <details><summary>¿Cuánto cuesta una noche?</summary><p>Depende de la temporada y de la habitación. El valor exacto aparece en Cloudbeds cuando eliges tus fechas.</p></details>
+      <details><summary>¿El desayuno está incluido?</summary><p>Sí, en todas las tarifas. También hay un menú diario casero, con costo adicional y reserva previa.</p></details>
+      <details><summary>¿Cuántas personas caben?</summary><p>Las cuatro habitaciones matrimoniales son para 2 personas y cada una tiene su baño privado. El módulo familiar tiene dos habitaciones matrimoniales que comparten un baño, para hasta 4 personas.</p></details>
+      <details><summary>¿Puedo trabajar desde el hotel?</summary><p>Sí. Hay wifi de alta velocidad, pensado también para quienes trabajan a distancia.</p></details>
+      <details><summary>¿Dónde queda?</summary><p>En Ritoque, sitio 70, comuna de Quintero, Región de Valparaíso. El mapa y los enlaces a Google Maps y Waze están en <a href="#como-llegar">Cómo llegar</a>.</p></details>
+    </div>
   </div>
 </section>
 
-<section class="seccion insta" aria-labelledby="insta-titulo">
-  <div class="encabezado">
-    <h2 id="insta-titulo">Más de 35 mil personas ya nos siguen</h2>
-    <p>Atardeceres, desayunos y el día a día en Ritoque en <a href="https://www.instagram.com/laritoquena/" target="_blank" rel="noopener">@laritoquena</a>.</p>
-  </div>
-  <div class="insta-grid">
-    <img src="img/balcones-fachada-720.webp" alt="Fachada de madera con balcones" width="720" height="960" loading="lazy">
-    <img src="img/hotel-fachada-720.webp" alt="El hotel entre jardín y bosque" width="720" height="395" loading="lazy">
-    <img src="img/balcon-terraza-720.webp" alt="Terraza de madera junto a la habitación" width="720" height="960" loading="lazy">
-    <img src="img/habitacion-ventanal-720.webp" alt="Habitación con ventanal abierto al mar" width="720" height="514" loading="lazy">
-  </div>
-  <p class="centro"><a class="btn btn-borde" href="https://www.instagram.com/laritoquena/" target="_blank" rel="noopener">Seguir en Instagram</a></p>
-</section>
-
-<section class="seccion preguntas" id="preguntas">
-  <div class="encabezado"><h2>Preguntas frecuentes</h2></div>
-  <div class="faq">
-    <details><summary>¿Cuánto cuesta una noche?</summary><p>Las noches parten desde $72.000 para dos personas, con desayuno incluido. El precio cambia según temporada y habitación: elija sus fechas en <a href="#reservar">Reserve directo</a> y verá el valor exacto.</p></details>
-    <details><summary>¿El desayuno está incluido?</summary><p>Sí, en todas las tarifas. También ofrecemos un menú diario casero con costo adicional y reserva previa.</p></details>
-    <details><summary>¿Puedo trabajar desde el hotel?</summary><p>Sí. Tenemos wifi de alta velocidad, pensado para quienes trabajan a distancia.</p></details>
-    <details><summary>¿Cuántas personas caben?</summary><p>Las cuatro habitaciones matrimoniales son para 2 personas. El módulo familiar, con dos habitaciones y un baño, recibe hasta 4.</p></details>
-    <details><summary>¿Cómo reservo?</summary><p>En esta misma web, con su sistema de reservas en línea: elige fechas, ve la disponibilidad real y paga de forma segura. Si tiene un requerimiento especial, escríbanos por WhatsApp.</p></details>
-    <details><summary>¿A qué hora es la llegada y la salida?</summary><p>Llegada desde las 14:30 y salida hasta las 12:00.</p></details>
-  </div>
-</section>
-
-<section class="contacto" id="contacto">
-  <h2>¿Tiene una consulta?</h2>
-  <p>Le respondemos por el canal que prefiera.</p>
-  <div class="botones">
-    <a class="btn btn-wa" href="https://wa.me/56961212436?text=Hola%2C%20quiero%20consultar%20por%20una%20estad%C3%ADa%20en%20La%20Ritoque%C3%B1a" target="_blank" rel="noopener">Escribir por WhatsApp</a>
-    <a class="btn btn-claro" href="tel:+56961212436">Llamar +56 9 6121 2436</a>
-    <a class="btn btn-claro" href="mailto:laritoquena@gmail.com?subject=Consulta%20por%20estad%C3%ADa">laritoquena@gmail.com</a>
+<section class="cierre" aria-labelledby="cierre-titulo">
+  <div class="contenedor cierre-fila">
+    <div>
+      <h2 id="cierre-titulo">¿Listo para venir?</h2>
+      <a class="btn btn-claro" href="#reservar">Elegir fechas</a>
+    </div>
+    <div class="contacto">
+      <p>¿Prefieres conversar?</p>
+      <a href="https://wa.me/56961212436?text=Hola%2C%20quiero%20consultar%20por%20una%20estad%C3%ADa%20en%20La%20Ritoque%C3%B1a" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="tel:+56961212436">+56 9 6121 2436</a>
+      <a href="mailto:laritoquena@gmail.com?subject=Consulta%20por%20estad%C3%ADa">laritoquena@gmail.com</a>
+    </div>
   </div>
 </section>
 </main>
 
 <footer class="pie">
-  <img src="img/logo-blanco.png" alt="La Ritoqueña Hotel de Playa" width="200" height="75" loading="lazy">
+  <img class="pie-logo" src="img/logo-blanco.png" alt="La Ritoqueña Hotel de Playa" width="600" height="227" loading="lazy">
   <p>Ritoque, sitio 70, Quintero · Región de Valparaíso, Chile</p>
-  <p><a href="https://www.instagram.com/laritoquena/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/laritoquena" target="_blank" rel="noopener">Facebook</a> · <a href="https://wa.me/56961212436" target="_blank" rel="noopener">WhatsApp</a></p>
+  <p class="pie-redes"><a href="https://www.instagram.com/laritoquena/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/laritoquena" target="_blank" rel="noopener">Facebook</a><a href="https://wa.me/56961212436" target="_blank" rel="noopener">WhatsApp</a></p>
   <p class="credito">Demo de renovación preparada por Ascensus · noviembre 2026</p>
 </footer>
 
-<a class="wa-flotante" href="https://wa.me/56961212436?text=Hola%2C%20quiero%20consultar%20por%20una%20estad%C3%ADa%20en%20La%20Ritoque%C3%B1a" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
-  <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><path fill="currentColor" d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6c-2 0-3.9-.5-5.6-1.5l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.900-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.700.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.3 6.3 0 0 0 1.3 3.3 14.4 14.4 0 0 0 5.5 4.9c2 .9 2.8.9 3.8.8.6-.1 1.900-.8 2.2-1.5s.3-1.4.2-1.5-.3-.2-.6-.4z"/></svg>
-</a>
-
-<div class="barra-movil">
-  <a class="btn btn-ambar" href="#reservar">Ver disponibilidad</a>
+<div class="barra-movil" id="barra-movil">
+  <a class="btn" href="#reservar">Ver disponibilidad</a>
+  <a class="barra-wa barra-tel" href="tel:+56961212436" aria-label="Llamar al +56 9 6121 2436">
+    <svg viewBox="0 0 24 24" width="21" height="21" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.5" d="M5 3.5h3.5l1.8 4.6-2.3 1.4a11 11 0 0 0 6.5 6.5l1.4-2.3 4.6 1.8V19a1.5 1.5 0 0 1-1.6 1.5A16.5 16.5 0 0 1 3.5 5.1 1.5 1.5 0 0 1 5 3.5z"/></svg>
+  </a>
+  <a class="barra-wa" href="https://wa.me/56961212436?text=Hola%2C%20quiero%20consultar%20por%20una%20estad%C3%ADa%20en%20La%20Ritoque%C3%B1a" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+    <svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6c-2 0-3.9-.5-5.6-1.5l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.3 6.3 0 0 0 1.3 3.3 14.4 14.4 0 0 0 5.5 4.9c2 .9 2.8.9 3.8.8.6-.1 1.9-.8 2.2-1.5s.3-1.4.2-1.5-.3-.2-.6-.4z"/></svg>
+  </a>
 </div>
 
 <script src="app.js"></script>
