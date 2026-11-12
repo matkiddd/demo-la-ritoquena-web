@@ -36,11 +36,17 @@ figure{margin:0}
 .enlace-flecha{display:inline-flex;align-items:center;gap:14px;min-height:44px;font:500 12.5px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;text-decoration:underline;text-underline-offset:9px;text-decoration-thickness:1px}
 .enlace-flecha::after{content:"→";font-size:15px;letter-spacing:0;text-decoration:none;transition:transform .2s}
 .enlace-flecha:hover::after{transform:translateX(4px)}
-/* Al pasar el mouse, el color contrario barre el botón de izquierda a derecha */
+/* Al pasar el mouse, el color contrario barre el botón de izquierda a derecha y al salir vuelve de derecha a izquierda */
 .btn{--barrido:var(--papel);--txt-hover:var(--carbon);position:relative;isolation:isolate;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 28px;border:1px solid var(--carbon);background:var(--carbon);color:var(--papel);font:500 13px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:color .45s cubic-bezier(.65,0,.35,1),transform .15s}
-.btn::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--barrido);transform:scaleX(0);transform-origin:right;transition:transform .45s cubic-bezier(.65,0,.35,1)}
+.btn::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--barrido);transform:scaleX(0);transform-origin:left;transition:transform .45s cubic-bezier(.65,0,.35,1)}
 .btn:hover{color:var(--txt-hover)}
-.btn:hover::before{transform:scaleX(1);transform-origin:left}
+.btn:hover::before{transform:scaleX(1)}
+/* Enlaces de la cabecera y del menú: la línea crece de izquierda a derecha y se recoge de vuelta */
+.nav-linea a,.menu-txt,.panel-menu nav a{background:linear-gradient(currentColor,currentColor) left bottom/0 1px no-repeat;transition:background-size .4s cubic-bezier(.65,0,.35,1)}
+.nav-linea a{background-position:left 0 top calc(50% + 12px)}
+.menu-txt{padding-bottom:7px;margin-bottom:-7px}
+.ico::before,.ico::after{transition:width .35s cubic-bezier(.65,0,.35,1)}
+.menu-btn:hover .ico::after{width:14px}
 .btn:active{transform:scale(.98)}
 .btn-claro{--barrido:var(--carbon);--txt-hover:var(--papel);background:var(--papel);border-color:var(--papel);color:var(--carbon)}
 .btn-linea{--barrido:var(--carbon);--txt-hover:var(--papel);background:transparent;color:var(--carbon)}
@@ -56,16 +62,19 @@ figure{margin:0}
 .ico::before{top:-7px}.ico::after{top:7px}
 .nav-linea{display:none;gap:26px}
 .nav-linea a{display:inline-flex;align-items:center;min-height:44px;font:500 12px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;text-decoration:none}
-.nav-linea a:hover{text-decoration:underline;text-underline-offset:8px}
+.nav-linea a:hover,.menu-btn:hover .menu-txt{background-size:100% 1px}
 .cab-marca{visibility:hidden;display:flex;align-items:center;min-height:44px}
 .cab.fija .cab-marca{visibility:visible}
 .cab-marca img{height:42px;width:auto}
 .logo-oscuro{display:none}
 .cab.fija .logo-claro{display:none}
 .cab.fija .logo-oscuro{display:block}
-.cab-reservar{justify-self:end;display:none;align-items:center;min-height:44px;padding:0 22px;border:1px solid currentColor;font:500 12.5px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;text-decoration:none;transition:background .2s,color .2s}
-.cab-reservar:hover{background:var(--papel);color:var(--carbon)}
-.cab.fija .cab-reservar:hover{background:var(--carbon);color:var(--papel)}
+.cab-reservar{justify-self:end;display:none;align-items:center;min-height:44px;padding:0 22px;border:1px solid currentColor;font:500 12.5px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;text-decoration:none;position:relative;isolation:isolate;overflow:hidden;transition:color .45s cubic-bezier(.65,0,.35,1)}
+.cab-reservar::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--papel);transform:scaleX(0);transform-origin:left;transition:transform .45s cubic-bezier(.65,0,.35,1)}
+.cab-reservar:hover{color:var(--carbon)}
+.cab-reservar:hover::before{transform:scaleX(1)}
+.cab.fija .cab-reservar::before{background:var(--carbon)}
+.cab.fija .cab-reservar:hover{color:var(--papel)}
 @media (min-width:760px){.cab-reservar{display:inline-flex}}
 /* En pantallas muy angostas la palabra "Menú" queda solo para lectores de pantalla */
 @media (max-width:359px){.menu-txt{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}}
@@ -78,7 +87,7 @@ figure{margin:0}
 .menu-cerrar::before{content:"×";font-size:28px;line-height:1;letter-spacing:0}
 .panel-menu nav{display:flex;flex-direction:column;gap:4px;margin:auto 0;padding:40px 0}
 .panel-menu nav a{font:300 clamp(32px,5.5vw,60px)/1.2 var(--serif);text-decoration:none;padding:4px 0;width:fit-content}
-.panel-menu nav a:hover{text-decoration:underline;text-underline-offset:10px;text-decoration-thickness:1px}
+.panel-menu nav a:hover{background-size:100% 1px}
 .panel-pie{font-size:14px;color:rgba(250,249,246,.72);margin:0}
 
 /* Portada */
